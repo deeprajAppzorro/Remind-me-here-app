@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioController : NSObject
 
 - (instancetype)init;
 - (void)tryPlayMusic;
 - (void)playSystemSound;
-
+-(void)stopTheSound;
 @end

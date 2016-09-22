@@ -9,9 +9,11 @@
 // 1
 #import "IAPHelper.h"
 #import <StoreKit/StoreKit.h>
-
+#import "BuyProduct_VC.h"
 
 NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurchasedNotification";
+NSString *const IAPHelperGetRestoredProductPurchasedNotification = @"IAPHelperGetRestoredProductPurchasedNotification";
+
 
 // 2
 @interface IAPHelper () <SKProductsRequestDelegate, SKPaymentTransactionObserver>
@@ -79,13 +81,15 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
     
 }
 
-- (void)validateReceiptForTransaction:(SKPaymentTransaction *)transaction {
+- (void)validateReceiptForTransaction:(SKPaymentTransaction *)transaction transaction:(NSDictionary *)status {
     
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperProductPurchasedNotification object:transaction.payment.productIdentifier userInfo:nil];
-  
+    [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperProductPurchasedNotification object:transaction.payment.productIdentifier userInfo:status];
    
+ 
 }
+
+
 
 #pragma mark - SKProductsRequestDelegate
 
@@ -109,6 +113,8 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
     
+    
+    NSLog(@"%@",error);
     NSLog(@"Failed to load list of products.");
     _productsRequest = nil;
     
@@ -131,7 +137,7 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
                 [self failedTransaction:transaction];
                 break;
             case SKPaymentTransactionStateRestored:
-                [self restoreTransaction:transaction];
+               [self restoreTransaction:transaction];
             default:
                 break;
         }
@@ -139,16 +145,19 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 }
 
 - (void)completeTransaction:(SKPaymentTransaction *)transaction {
-    NSLog(@"completeTransaction...");
-    
-    [self validateReceiptForTransaction:transaction];
+    NSLog(@"completeTransaction ");
+    //@{@"status":@"Complete"}
+  
+    [self validateReceiptForTransaction:transaction transaction:@{@"status":@"Complete"}];
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 - (void)restoreTransaction:(SKPaymentTransaction *)transaction {
-    NSLog(@"restoreTransaction...");
     
-    [self validateReceiptForTransaction:transaction];
+    
+    NSLog(@"restoreTransaction...");
+ 
+  [self validateReceiptForTransaction:transaction transaction:nil];
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
@@ -156,9 +165,12 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
     
    
     NSLog(@"failedTransaction...");
+    
     if (transaction.error.code != SKErrorPaymentCancelled)
     {
-         [self validateReceiptForTransaction:transaction];
+        
+        
+         [self validateReceiptForTransaction:transaction transaction:@{@"status":@"Failed to validate receipt."}];
         NSLog(@"Transaction error: %@", transaction.error.localizedDescription);
     }
     
@@ -184,8 +196,25 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
     
 }
 
-- (void)restoreCompletedTransactions {
++ (void)restoreCompletedTransactions {
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+}
+
+
+//Then this delegate Function Will be fired
+- (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
+{
+    
+    
+    NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
+    for (SKPaymentTransaction *transaction in queue.transactions)
+    {
+        NSString *productID = transaction.payment.productIdentifier;
+        NSLog(@"List : %@",productID);
+        
+        [[AppDelegate sharedDelegate] PruchasedProductsToUD:productID];
+    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperGetRestoredProductPurchasedNotification object:nil userInfo:nil];
 }
 
 @end

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SliderCell : UITableViewCell
+@property (retain, nonatomic) IBOutlet UILabel *lbl_heading;
+@property (retain, nonatomic) IBOutlet UIImageView *imgViewCelIcon;
+
 
 @end

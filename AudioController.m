@@ -7,7 +7,7 @@
 //
 
 #import "AudioController.h"
-@import AVFoundation;
+
 
 @interface AudioController () <AVAudioPlayerDelegate>
 
@@ -53,6 +53,7 @@
 - (void)playSystemSound
 {
     AudioServicesPlaySystemSound(self.pewPewSound);
+    
 }
 
 #pragma mark - Private
@@ -80,7 +81,7 @@
 
 - (void)configureAudioPlayer {
     // Create audio player with background music
-    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:@"background-music-aac" ofType:@"caf"];
+    NSString *backgroundMusicPath = [[NSBundle mainBundle] pathForResource:@"alertTone" ofType:@"wav"];
     NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPath];
     self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:nil];
     self.backgroundMusicPlayer.delegate = self;  // We need this so we can restart after interruptions
@@ -94,9 +95,10 @@
 	// Data Formats (a.k.a. audio encoding): linear PCM (such as LEI16) or IMA4
 	// Sounds must be 30 sec or less
 	// And only one sound plays at a time!
-	NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
+	NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"alertTone" ofType:@"wav"];
 	NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
 	AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_pewPewSound);
+    
 }
 
 #pragma mark - AVAudioPlayerDelegate methods
@@ -118,5 +120,8 @@
       [self tryPlayMusic];
       self.backgroundMusicInterrupted = NO;
 }
-
+-(void)stopTheSound
+{
+  [self.backgroundMusicPlayer stop];
+}
 @end

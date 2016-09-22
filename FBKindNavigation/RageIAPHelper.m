@@ -15,8 +15,8 @@
     static RageIAPHelper * sharedInstance;
     dispatch_once(&once, ^{
         NSSet * productIdentifiers = [NSSet setWithObjects:
-                                      @"User_Premium_monthlyNew",
-                                      @"Com.DNDFinderNew.App.User_Premium_monthly",nil];
+                                      @"com.Remindme.here.Tier1",
+                                      @"com.Remindme.here.Tier2",@"com.Remindme.here.Tier3",nil];
         sharedInstance = [[self alloc] initWithProductIdentifiers:productIdentifiers];
     });
     return sharedInstance;

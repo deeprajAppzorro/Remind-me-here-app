@@ -22,4 +22,9 @@
     // Configure the view for the selected state
 }
 
+- (void)dealloc {
+    [_lbl_heading release];
+    [_imgViewCelIcon release];
+    [super dealloc];
+}
 @end

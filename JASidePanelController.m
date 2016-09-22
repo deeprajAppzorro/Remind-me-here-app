@@ -909,7 +909,8 @@ static char ja_kvoContext;
 
 - (void)_toggleScrollsToTopForCenter:(BOOL)center left:(BOOL)left right:(BOOL)right {
     // iPhone only supports 1 active UIScrollViewController at a time
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
         [self _toggleScrollsToTop:center forView:self.centerPanelContainer];
         [self _toggleScrollsToTop:left forView:self.leftPanelContainer];
         [self _toggleScrollsToTop:right forView:self.rightPanelContainer];

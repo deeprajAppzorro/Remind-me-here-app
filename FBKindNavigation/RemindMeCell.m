@@ -22,4 +22,12 @@
     // Configure the view for the selected state
 }
 
+- (void)dealloc {
+    [_lbl_name release];
+    [_lbl_desc release];
+    [_btn_edit release];
+    [_btn_delete release];
+    [_btn_startPause release];
+    [super dealloc];
+}
 @end

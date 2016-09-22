@@ -12,3 +12,17 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+#define userDefauktKey @"mapLocations"
+#define PruchasedProductkey @"PruchasedProductkey"
+#define reloadPinsOnMap @"reloadPinsOnMap"
+#define reloadDataInBackground @"reloadDataInBackground"
+
+
+#define EC_NotificationCenter   [NSNotificationCenter defaultCenter]
+#define App_Delegate            ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define EC_Defaults             [NSUserDefaults standardUserDefaults]
+#define kCardPremiumVersion     @"Com.DNDFinderNew.App.User_Premium_monthly"
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)

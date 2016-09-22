@@ -11,10 +11,13 @@
 
 @interface Annotation : NSObject<MKAnnotation>
 {
-    double longitude;
-    double latitude;
+    NSString *_title;
+    NSString *_subtitle;
+    
+    CLLocationCoordinate2D _coordinate;
     
 }
-@property (nonatomic )double longitude;
-@property (nonatomic )double latitude;
+// Getters and setters
+- (void)setTitle:(NSString *)title;
+- (void)setSubtitle:(NSString *)subtitle;
 @end

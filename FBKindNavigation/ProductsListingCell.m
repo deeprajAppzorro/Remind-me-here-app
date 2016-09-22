@@ -9,7 +9,10 @@
 #import "ProductsListingCell.h"
 
 @implementation ProductsListingCell
-
+@synthesize BuyProductBtn;
+@synthesize ProductDescLabel;
+@synthesize ProductTitleLabel;
+@synthesize ProductPriceLabel;
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

@@ -8,6 +8,11 @@
 
 #import "RightPanel_VC.h"
 
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
+
+#import "CenterPanel_VC.h"
+
 @interface RightPanel_VC ()
 
 @end
@@ -26,7 +31,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+}
+
+- (IBAction)btnAction_ShowCenterPanel:(id)sender
+{
+    self.sidePanelController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[CenterPanel_VC alloc] init]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +44,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

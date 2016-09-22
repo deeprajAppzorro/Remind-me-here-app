@@ -10,4 +10,6 @@
 
 @interface BuyProduct_VC : UIViewController
 
++(void)ProductPurchased:(NSString *)TransactionStatus;
+
 @end

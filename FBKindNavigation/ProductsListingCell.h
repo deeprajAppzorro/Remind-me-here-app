@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProductsListingCell : UITableViewCell
-
+@property(strong ,nonatomic)IBOutlet UILabel *ProductTitleLabel;
+@property(strong,nonatomic)IBOutlet UILabel *ProductDescLabel;
+@property(strong,nonatomic)IBOutlet UILabel *ProductPriceLabel;
+@property(strong,nonatomic)IBOutlet UIButton *BuyProductBtn;
 @end

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RightPanel_VC : UIViewController
-
+{
+    
+}
+- (IBAction)btnAction_ShowCenterPanel:(id)sender;
 @end
