@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE9875CD1790643D00896C40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9875CC1790643D00896C40 /* UIKit.framework */; };
+		FE9875CF1790643D00896C40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9875CE1790643D00896C40 /* Foundation.framework */; };
+		FE9875D11790643D00896C40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9875D01790643D00896C40 /* CoreGraphics.framework */; };
+		FE9875D71790643D00896C40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9875D51790643D00896C40 /* InfoPlist.strings */; };
+		FE9875D91790643D00896C40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9875D81790643D00896C40 /* main.m */; };
+		FE9875DD1790643D00896C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9875DC1790643D00896C40 /* AppDelegate.m */; };
+		FE9875DF1790643E00896C40 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9875DE1790643E00896C40 /* Default.png */; };
+		FE9875E11790643E00896C40 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9875E01790643E00896C40 /* Default@2x.png */; };
+		FE9875E31790643E00896C40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9875E21790643E00896C40 /* Default-568h@2x.png */; };
+		FE9875E61790643E00896C40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9875E51790643E00896C40 /* ViewController.m */; };
+		FE9875E91790643E00896C40 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9875E71790643E00896C40 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE9875C81790643D00896C40 /* FBKindNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBKindNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9875CC1790643D00896C40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE9875CE1790643D00896C40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE9875D01790643D00896C40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE9875D41790643D00896C40 /* FBKindNavigation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBKindNavigation-Info.plist"; sourceTree = "<group>"; };
+		FE9875D61790643D00896C40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE9875D81790643D00896C40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE9875DA1790643D00896C40 /* FBKindNavigation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBKindNavigation-Prefix.pch"; sourceTree = "<group>"; };
+		FE9875DB1790643D00896C40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE9875DC1790643D00896C40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE9875DE1790643E00896C40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FE9875E01790643E00896C40 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FE9875E21790643E00896C40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FE9875E41790643E00896C40 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE9875E51790643E00896C40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE9875E81790643E00896C40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE9875C51790643D00896C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9875CD1790643D00896C40 /* UIKit.framework in Frameworks */,
+				FE9875CF1790643D00896C40 /* Foundation.framework in Frameworks */,
+				FE9875D11790643D00896C40 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE9875BD1790643D00896C40 = {
+			isa = PBXGroup;
+			children = (
+				FE9875D21790643D00896C40 /* FBKindNavigation */,
+				FE9875CB1790643D00896C40 /* Frameworks */,
+				FE9875C91790643D00896C40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE9875C91790643D00896C40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE9875C81790643D00896C40 /* FBKindNavigation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE9875CB1790643D00896C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE9875CC1790643D00896C40 /* UIKit.framework */,
+				FE9875CE1790643D00896C40 /* Foundation.framework */,
+				FE9875D01790643D00896C40 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE9875D21790643D00896C40 /* FBKindNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				FE9875DB1790643D00896C40 /* AppDelegate.h */,
+				FE9875DC1790643D00896C40 /* AppDelegate.m */,
+				FE9875E41790643E00896C40 /* ViewController.h */,
+				FE9875E51790643E00896C40 /* ViewController.m */,
+				FE9875E71790643E00896C40 /* ViewController.xib */,
+				FE9875D31790643D00896C40 /* Supporting Files */,
+			);
+			path = FBKindNavigation;
+			sourceTree = "<group>";
+		};
+		FE9875D31790643D00896C40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE9875D41790643D00896C40 /* FBKindNavigation-Info.plist */,
+				FE9875D51790643D00896C40 /* InfoPlist.strings */,
+				FE9875D81790643D00896C40 /* main.m */,
+				FE9875DA1790643D00896C40 /* FBKindNavigation-Prefix.pch */,
+				FE9875DE1790643E00896C40 /* Default.png */,
+				FE9875E01790643E00896C40 /* Default@2x.png */,
+				FE9875E21790643E00896C40 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE9875C71790643D00896C40 /* FBKindNavigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE9875EC1790643E00896C40 /* Build configuration list for PBXNativeTarget "FBKindNavigation" */;
+			buildPhases = (
+				FE9875C41790643D00896C40 /* Sources */,
+				FE9875C51790643D00896C40 /* Frameworks */,
+				FE9875C61790643D00896C40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBKindNavigation;
+			productName = FBKindNavigation;
+			productReference = FE9875C81790643D00896C40 /* FBKindNavigation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE9875BF1790643D00896C40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Abhishek Bhardwaj";
+			};
+			buildConfigurationList = FE9875C21790643D00896C40 /* Build configuration list for PBXProject "FBKindNavigation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FE9875BD1790643D00896C40;
+			productRefGroup = FE9875C91790643D00896C40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE9875C71790643D00896C40 /* FBKindNavigation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE9875C61790643D00896C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9875D71790643D00896C40 /* InfoPlist.strings in Resources */,
+				FE9875DF1790643E00896C40 /* Default.png in Resources */,
+				FE9875E11790643E00896C40 /* Default@2x.png in Resources */,
+				FE9875E31790643E00896C40 /* Default-568h@2x.png in Resources */,
+				FE9875E91790643E00896C40 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE9875C41790643D00896C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9875D91790643D00896C40 /* main.m in Sources */,
+				FE9875DD1790643D00896C40 /* AppDelegate.m in Sources */,
+				FE9875E61790643E00896C40 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE9875D51790643D00896C40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9875D61790643D00896C40 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE9875E71790643E00896C40 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9875E81790643E00896C40 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE9875EA1790643E00896C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE9875EB1790643E00896C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE9875ED1790643E00896C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FBKindNavigation/FBKindNavigation-Prefix.pch";
+				INFOPLIST_FILE = "FBKindNavigation/FBKindNavigation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE9875EE1790643E00896C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FBKindNavigation/FBKindNavigation-Prefix.pch";
+				INFOPLIST_FILE = "FBKindNavigation/FBKindNavigation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE9875C21790643D00896C40 /* Build configuration list for PBXProject "FBKindNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9875EA1790643E00896C40 /* Debug */,
+				FE9875EB1790643E00896C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE9875EC1790643E00896C40 /* Build configuration list for PBXNativeTarget "FBKindNavigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9875ED1790643E00896C40 /* Debug */,
+				FE9875EE1790643E00896C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE9875BF1790643D00896C40 /* Project object */;
+}
